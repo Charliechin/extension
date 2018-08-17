@@ -9,16 +9,14 @@ chrome.runtime.onMessage.addListener(
       var email = $('#user_email').val();
 
       var data = {"name": name, "lastName": lastName, "email": email }
-      console.log("chrome ext");
       //console.log(firstHref);
       console.log(name + " " + lastName + " " + email);
-      console.log("chrome ext");
 
+      // This passes to Background.js the url and the data from the form
       chrome.runtime.sendMessage({
         "message":  "open_new_tab",
-        "url":      "file:///tmp/form.html",
+        "url":      "https://www.azilo.com/sign_in",
         "form_data": data
       });
-      //chrome.runtime.sendMessage({"message": "open_new_tab", "url": firstHref});
     }
   });
