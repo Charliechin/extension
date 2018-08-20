@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener(
 
       chrome.runtime.sendMessage({
         "message":  "open_new_tab",
-        "url":      "file:///tmp/form.html",
+        "url":      "file:///home/carlos/Desktop/form.html",
         "form_data": data
       });
       //chrome.runtime.sendMessage({"message": "open_new_tab", "url": firstHref});
